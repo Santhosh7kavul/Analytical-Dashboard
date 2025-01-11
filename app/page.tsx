@@ -40,14 +40,7 @@ export default function Dashboard() {
         label: "Number of EVs",
         data: [8500, 3200, 2800, 1500, 1200, 900, 850, 700],
         backgroundColor: [
-          "hsl(var(--chart-1))",
-          "hsl(var(--chart-2))",
-          "hsl(var(--chart-3))",
-          "hsl(var(--chart-4))",
-          "hsl(var(--chart-5))",
-          "hsl(var(--chart-1) / 0.7)",
-          "hsl(var(--chart-2) / 0.7)",
-          "hsl(var(--chart-3) / 0.7)",
+           "rgb(65, 105, 225)"
         ],
       },
     ],
@@ -68,7 +61,7 @@ export default function Dashboard() {
       {
         label: "Number of EVs",
         data: [5200, 2100, 1800, 1500, 1300, 1200, 1000, 800],
-        backgroundColor: "hsl(var(--chart-2))",
+        backgroundColor:  ["rgb(65, 105, 225)"],
       },
     ],
   };
@@ -105,18 +98,18 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen flex flex-col space-y-4 p-4 md:p-8 pt-6 bg-secondary">
       <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight text-primary">MapUp Analytics Dashboard</h2>
+        <h2 className="text-3xl font-bold text-primary">mapup - Analytics Dashboard</h2>
       </div>
       <Tabs defaultValue="overview" className="space-y-4">
-        <TabsList className="bg-gray-200">
+        <TabsList className="text-white">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="distribution">Geographic Distribution</TabsTrigger>
           <TabsTrigger value="trends">Trends</TabsTrigger>
         </TabsList>
         <TabsContent value="overview" className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="bg-gray-50">
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <Card className="bg-black text-white">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 ">
                 <CardTitle className="text-sm font-medium">Total EVs</CardTitle>
                 <Car className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
@@ -124,7 +117,7 @@ export default function Dashboard() {
                 <div className="text-2xl font-bold">18,974</div>
               </CardContent>
             </Card>
-            <Card className="bg-gray-50">
+            <Card className="bg-black text-white">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Average Range</CardTitle>
                 <Battery className="h-4 w-4 text-muted-foreground" />
@@ -133,7 +126,7 @@ export default function Dashboard() {
                 <div className="text-2xl font-bold">264 mi</div>
               </CardContent>
             </Card>
-            <Card className="bg-gray-50">
+            <Card className="bg-black text-white">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Avg. MSRP</CardTitle>
                 <Zap className="h-4 w-4 text-muted-foreground" />
@@ -142,7 +135,7 @@ export default function Dashboard() {
                 <div className="text-2xl font-bold">$52,847</div>
               </CardContent>
             </Card>
-            <Card className="bg-gray-50">
+            <Card className="bg-black text-white">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Countries</CardTitle>
                 <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -153,7 +146,7 @@ export default function Dashboard() {
             </Card>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-            <Card className="col-span-4 bg-gray-50">
+            <Card className="col-span-4 bg-black text-white">
               <CardHeader>
                 <CardTitle>Monthly Registrations</CardTitle>
               </CardHeader>
@@ -161,7 +154,7 @@ export default function Dashboard() {
                 <LineChart className="h-[300px] " data={monthlyTrends} />
               </CardContent>
             </Card>
-            <Card className="col-span-3 bg-gray-50">
+            <Card className="col-span-3 bg-black text-white">
               <CardHeader>
                 <CardTitle>EV Types Distribution</CardTitle>
               </CardHeader>
@@ -172,16 +165,17 @@ export default function Dashboard() {
           </div>
         </TabsContent>
         <TabsContent value="distribution">
-          <div className="grid gap-4 md:grid-cols-2">
-            <Card className="bg-gray-50">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+          {/* <div className="flex-1 grid gap-4 md:grid-cols-2 "> */}
+            <Card className="col-span-3 bg-black text-white">
               <CardHeader>
-                <CardTitle>County Distribution</CardTitle>
+                <CardTitle>Country Distribution</CardTitle>
               </CardHeader>
               <CardContent>
                 <BarChart className="h-[400px]" data={geographicDistribution} />
               </CardContent>
             </Card>
-            <Card className="bg-gray-50">
+            <Card className="col-span-4 bg-black text-white">
               <CardHeader>
                 <CardTitle>City Distribution</CardTitle>
               </CardHeader>
@@ -193,7 +187,7 @@ export default function Dashboard() {
         </TabsContent>
         <TabsContent value="trends">
           <div className="grid gap-4">
-            <Card className="bg-gray-50">
+            <Card className="bg-black text-white">
               <CardHeader>
                 <CardTitle>Registration Trends</CardTitle>
               </CardHeader>

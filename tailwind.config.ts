@@ -103,7 +103,7 @@ const config: Config = {
     extend: {
      
       colors: {
-        background: 'rgb(0, 0, 0)', // Black
+        background: 'rgb(49, 57, 69)', // Black
         foreground: 'rgb(38, 38, 66)', // Dark Blue
         card: {
           DEFAULT: 'rgb(30, 30, 30)', // Black variant
@@ -111,10 +111,10 @@ const config: Config = {
         },
         popover: {
           DEFAULT: 'rgb(40, 40, 40)', // Black variant
-          foreground: 'rgb(65, 105, 225)', // Royal Blue
+          foreground: 'rgb(40, 50, 84)', // Royal Blue
         },
         primary: {
-          DEFAULT: 'rgb(0, 0, 255)', // Blue
+          DEFAULT: 'rgb(39, 148, 206)', // Blue
           foreground: 'rgb(34, 39, 54)', // White
         },
         secondary: {

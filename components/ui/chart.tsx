@@ -71,6 +71,9 @@ export function LineChart({ data, className }: ChartProps) {
 export function BarChart({ data, className }: ChartProps) {
   return <Bar options={chartOptions} data={data} className={className} />;
 }
+export function BarChart1({ data, className }: ChartProps) {
+  return <Bar options={chartOptions} data={data} className={className} />;
+}
 
 export function PieChart({ data, className }: ChartProps) {
   return <Pie options={pieOptions} data={data} className={className} />;

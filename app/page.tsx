@@ -10,7 +10,7 @@ import evTypesJsonData from "../data converter/output/Electric_Vehicle_Type_Dist
 import makeJsonData from "../data converter/output/Make_Distribution.json";
 import modelJsonData from "../data converter/output/Model_Distribution.json";
 import cityJsonData from "../data converter/output/City_Distribution.json";
-import { SetStateAction, useState } from "react";
+// import { SetStateAction, useState } from "react";
 
 interface CountyData {
   County: string;
@@ -147,7 +147,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen flex flex-col space-y-4 p-4 md:p-8 pt-6 bg-secondary">
       <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold text-primary">mapup - Analytics Dashboard</h2>
+        <h2 className="text-3xl font-bold text-primary">Analytics Dashboard</h2>
       </div>
       <Tabs defaultValue="overview" className="space-y-4">
 
